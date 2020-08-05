@@ -12,7 +12,7 @@ import time
 #sock.bind(('0.0.0.0',int(sys.argv[1])))
 
 while True:
-    time.sleep(300)
+    time.sleep(60*30)
     try:
         os.system('git pull')
         os.system('bash runme.sh')
