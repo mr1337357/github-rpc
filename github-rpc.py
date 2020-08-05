@@ -13,5 +13,8 @@ if len(sys.argv)<2:
 
 while True:
     time.sleep('300')
-    os.system('git pull')
-    os.system('bash runme.sh')
+    try:
+        os.system('git pull')
+        os.system('bash runme.sh')
+    except:
+        pass
