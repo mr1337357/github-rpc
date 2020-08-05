@@ -15,6 +15,7 @@ while True:
     time.sleep(60*30)
     try:
         os.system('git pull')
-        os.system('bash runme.sh')
+        if os.system('openssl dgst -sha256 -verify ~/.keys/pubkey-rpc.pem -signature runme.sh.sig runme.sh') == 0:
+            os.system('bash runme.sh')
     except:
         pass
